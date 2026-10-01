@@ -521,7 +521,7 @@ interface "load menu"
     center -420 155
     dimensions 120 30
   active if "pilot selected"
-  button d "_Delete"
+  button d "(B) _Delete"
     center -285 155
     dimensions 90 30
 
@@ -1720,7 +1720,7 @@ interface "planet"
   active if "has ship"
   sprite "ui/planet dialog button"
     center 340 310
-  button d "_Depart"
+  button d "_Depart (B)"
     center 340 310
     dimensions 140 40
     size 18
@@ -1825,7 +1825,7 @@ interface "planet (small screen)"
   active if "has ship"
   sprite "ui/planet dialog button"
     center 280 310
-  button d "_Depart"
+  button d "_Depart (B)"
     center 280 310
     dimensions 140 40
     size 18
@@ -1989,7 +1989,7 @@ interface "boarding"
     dimensions 80 30
   
   active if "can defend"
-  button D "_Defend"
+  button D "_Defend (LB>B)"
     center 210 185
     dimensions 80 30
 
@@ -2370,7 +2370,7 @@ interface "map buttons" bottom right
   active
   sprite "ui/dialog cancel"
     from -90 -50 to 0 0
-  button d "_Done"
+  button d "(B) _Done"
     from -80 -40 to -10 -10
   
   active
@@ -2425,7 +2425,7 @@ interface "map buttons (small screen)" bottom right
   active
   sprite "ui/dialog cancel"
     from -90 -50 to 0 0
-  button d "_Done"
+  button d "_Done (B)"
     from -80 -40 to -10 -10
 
   active
@@ -2604,7 +2604,7 @@ interface "info panel"
     dimensions 120 30
   
   visible
-  button d "_Done"
+  button d "_Done (B)"
     center 455 305
     dimensions 90 30
   button m "_Missions..."
@@ -2643,7 +2643,7 @@ interface "info panel"
   visible if "show disown"
   sprite "ui/dialog cancel"
     center -150 305
-  button D "Disown"
+  button D "Disown (LB>B)"
     center -150 305
     dimensions 70 30
   
@@ -2692,9 +2692,11 @@ interface "info panel"
 interface "message log"
   value "width" 570
 
-  button d ""
-    from 570 0 top left
-    to 0 0 bottom right
+  sprite "ui/dialog cancel"
+    center 744 -80 bottom left
+  button d "(B) Close"
+    center 744 -80 bottom left
+    dimensions 70 30
   button "A" ""
     center 710 -30 bottom left
     dimensions 200 60
@@ -2711,15 +2713,15 @@ interface "message log"
   button i ""
     center 706 -20 bottom left
     dimensions 142 40
-  "wrapped label" "Hide less _important messages"
+  "wrapped label" "  (#i#) Hide less _important messages"
     center 714 -16 bottom left
-    width 130
+    width 150
     color active
     inactive medium
   sprite "ui/dialog cancel"
     center 654 -80 bottom left
   active if "!empty"
-  button c "Clear"
+  button c "(#c#) Clear"
     center 654 -80 bottom left
     dimensions 70 30
 
@@ -2738,7 +2740,7 @@ interface "hail panel"
     width 330
     truncate back
 
-  button d "_Done"
+  button d "_Done (B)"
     center 250 115
     dimensions 80 30
 
