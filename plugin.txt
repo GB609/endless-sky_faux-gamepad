@@ -8,3 +8,6 @@ tags
   Controller
   Gamepad
   UI
+
+dependencies:
+  "game version": v0.10.12

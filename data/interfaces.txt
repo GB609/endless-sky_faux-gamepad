@@ -537,7 +537,7 @@ interface "load menu"
     center -60 155
     dimensions 120 30
   active if "snapshot selected"
-  button R "Remove"
+  button R "(LB>Y) Remove"
     center 75 155
     dimensions 90 30
   
@@ -2577,8 +2577,10 @@ interface "info panel"
     from 250 -290 to 500 280
   
   visible if "ship tab"
-  button R
-    center -375 -270
+  sprite "ui/very wide button"
+    center 430 255
+  button R "(LB>Y) Rename"
+    center 430 255
     dimensions 250 30
   sprite "ui/ship tab"
     center 0 -310
