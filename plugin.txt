@@ -1,0 +1,10 @@
+name "Faux Gamepad"
+about "Adds controller button hints for input from AntiMicroX"
+version 0.1-alpha
+authors
+  Karsten Teichmann
+
+tags
+  Controller
+  Gamepad
+  UI
