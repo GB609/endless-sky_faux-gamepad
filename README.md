@@ -4,8 +4,8 @@ Fake controller support for Endless Sky through a UI plugin and AntimicroX profi
 Endless Sky does not natively support a gamepad, but almost every function is bound to keyboard keys.
 Hardly anything strictly requires a mouse.
 
-As such, a very high 'fake' support can be achieved by combining a few techniques to get as many different key strokes
-onto the controller as possible. But these must also be documented, which is why the plugin 'mods in' button labels.
+As such, a very high 'fake' support can be achieved by combining a few techniques to get as many different key strokes onto the controller as possible.  
+But these must also be documented, which is why the plugin 'mods in' button labels.
 
 **This plugin requires tools and config outside of the game to be operational!**  
 The plugin itself does not generate keystrokes from controllers or start external tools as this is not possible
@@ -15,19 +15,18 @@ with the data scripting of ES. It is more of a 'documentation' of the controller
 
 ## TL;DR
 
-1. Install AntiMicroX (use original on Github, sadly there exist scammer websites for AMX)
+1. Install AntiMicroX (use original from Github, sadly there exist scammer websites for AMX)
 2. Get the plugin source into the `config/plugins` folder of Endless Sky.
-3. Copy the keybinding setup file from `resources` (or its content) into your installation.  
+3. Copy the keybinding setup file from `resources` (or its content) into your ES config dir.  
    No deviations/customizations if you don't plan to change the plugin and `.amgp` files as well to match it.
-4. Use whatever script, wrapper, autostart config you want to make sure AntiMicroX is started with the `.amgp` file
-   from the plugin's `resoures` folder when launching the game.
+4. Use whatever script, wrapper, autostart config you want to make sure AntiMicroX is started with the `.amgp` file from the plugin's `resoures` folder when launching the game.
 
 ## Strategy:
 
 1. A UI plugin enriches button labels and occasionally adds keybind hint labels.  
    Without this, the myriad of different contexts and functions are hard to learn and remember.  
    The plugin alone can't change ALL labels, some are hardcoded. For this, the `resource` directory contains 
-   a rudimentary patch for version v.0.11.12.
+   a rudimentary patch for version v.0.11.2.
 2. A pre-configured profile for AntiMicroX is part of the plugin sources.  
    The user has to manually configure this
    profile for AntiMicroX outside of the game.
@@ -73,7 +72,7 @@ For now, the plugin uses textual representations for buttons. These labels are d
 - Analog sticks: `(L)`, `(R)` for clicking it down. `(Lx)` and `(Rx)` for directions.
 - Bumpers: `(LB)`, `(RB)`
 - Triggers: `(LT)`, `(RT)`
-- The 'middle buttons' guide, 'view' (=select) and 'menu' (=start): `(G)`, `(V)`, `(M)`
+- The 'middle buttons' guide, 'view' (=select) and 'menu' (=start): `(G)`, `(S)`, `(M)`
 - Holding down (long press): `(*[X])`, where `[X]` can be any of the above except triggers, sticks **with** directions and guide.
 - Sequences using one button as a modifier: `([MOD]>[X])`, where `[MOD]` will primarily be a bumper and `[X]` any button or direction != `[MOD]`.  
   Here, it is assumed that `[M]` must be held continuously even when it is **not** prefixed with `*`.  
@@ -110,5 +109,7 @@ finally added into the controller profile.
 - Typing names. In theory, almost every key of the alphabet is somewhere in the controller, but these are interna.  
   What's needed here would be a proper on-screen keyboard.
 - Shops permit changing control focus between the 'left' panel and the 'ship' panel, but there is no visual indication.
-- Several of the patched labels in the POC are larger than their buttons/borders allow.
+- Several of the patched labels in the POC are larger than their buttons/borders, leading to ugly overflow at the moment.
+- It is close to impossible to get a streamlined control schema across all UI windows because the very same keys  are often used for wildly different things depending on context. The reason for that is that keys were assigned in a FIFO order based on starting letters of labels (as is usually done for menus and shortcuts in regular desktop applications). This results e.g. in having all functions from the outfitter spread out across the controller (Shoulder, trigger, face button, dpad) instead of placing them all in the same area. As external key providers like AntiMicroX are not aware of in-game contexts and there's no interaction between them, context changes are neither communicated nor visible.
+    It would be possible to define a special shopping subset in AntiMicroX, but the user can't see which set is currently active which can quickly lead to confusion about the effective control schema. Using a special secondary 'mouse mode' can already lead to such confusion as it is.
   
