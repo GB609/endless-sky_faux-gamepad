@@ -276,7 +276,7 @@ interface "map detail panel"
   visible if "has escort destination"
   sprite "ui/wide button"
     center -256 56
-  button c "Cancel order"
+  button c "(*B) Cancel order"
     center -256 56
     dimensions 90 30
 
@@ -323,7 +323,7 @@ interface "main menu"
     center 360 0
   
   visible if "pilot loaded"
-  button e "_Enter Ship"
+  button e "(*Y) _Enter Ship"
     center 435 155
     dimensions 90 30
   visible if "gamerules unlocked"
@@ -342,15 +342,15 @@ interface "main menu"
     dimensions 90 30
   
   visible
-  button m "_Manage Pilots..."
+  button m "(M) _Manage Pilots"
     center 300 155
     dimensions 120 30
   
   # Left panel (credits):
-  button q "_Quit"
+  button q "_Quit (*M)"
     center -285 155
     dimensions 90 30
-  button p "_Preferences..."
+  button p "(v) _Preferences"
     center -420 155
     dimensions 120 30
 
@@ -465,11 +465,11 @@ interface "start conditions menu"
   sprite "_menu/buttonless side panel"
     center 360 0
   
-  button b "_Back to Menu"
+  button b "(>) _Back to Menu"
     center -420 155
     dimensions 120 30
   active if "unlocked start"
-  button s "_Start Game"
+  button s "(Y) _Start Game"
     center -285 155
     dimensions 90 30
   sprite "ui/wide button"
@@ -528,25 +528,25 @@ interface "load menu"
   sprite "ui/wide button"
     center -435 195
   active
-  button o "_Open Saves"
+  button o "(X) _Open Saves"
     center -435 195
     dimensions 90 30
   
   active if "pilot alive"
-  button a "_Add Snapshot"
+  button a "(A) _Add Snapshot"
     center -60 155
     dimensions 120 30
   active if "snapshot selected"
-  button R "(LB>Y) Remove"
+  button R "(LB>X) Remove"
     center 75 155
     dimensions 90 30
   
   active
-  button b "_Back to Menu"
+  button b "(>) _Back to Menu"
     center 300 155
     dimensions 120 30
   active if "pilot loaded"
-  button l "_Load Game"
+  button l "(*S) _Load Game"
     center 435 155
     dimensions 90 30
   active
@@ -568,21 +568,21 @@ interface "controls"
     center -350 102
   sprite "ui/settings base panel"
     center -1 -20
-  button c "_Controls"
+  button c "(*B) _Controls"
     center -300 -230
     dimensions 90 30
     color bright
-  button s "_Settings"
+  button s "(Y) _Settings"
     center -300 -190
     dimensions 90 30
     color medium
     hover bright
-  button p "_Plugins"
+  button p "(v) _Plugins"
     center -300 -150
     dimensions 90 30
     color medium
     hover bright
-  button a "_Audio"
+  button a "(A) _Audio"
     center -300 -110
     dimensions 90 30
     color medium
@@ -623,21 +623,21 @@ interface "settings"
     center 285 -82
   sprite "ui/settings base panel"
     center -1 -20
-  button c "_Controls"
+  button c "(*B) _Controls"
     center -300 -230
     dimensions 90 30
     color medium
     hover bright
-  button s "_Settings"
+  button s "(Y) _Settings"
     center -300 -190
     dimensions 90 30
     color bright
-  button p "_Plugins"
+  button p "(v) _Plugins"
     center -300 -150
     dimensions 90 30
     color medium
     hover bright
-  button a "_Audio"
+  button a "(A) _Audio"
     center -300 -110
     dimensions 90 30
     color medium
@@ -667,26 +667,26 @@ interface "plugins"
     center -1 -20
   sprite "ui/very wide button"
     center -194 210
-  button c "_Controls"
+  button c "(*B) _Controls"
     center -300 -230
     dimensions 90 30
     color medium
     hover bright
-  button s "_Settings"
+  button s "(Y) _Settings"
     center -300 -190
     dimensions 90 30
     color medium
     hover bright
-  button p "_Plugins"
+  button p "(v) _Plugins"
     center -300 -150
     dimensions 90 30
     color bright
-  button a "_Audio"
+  button a "(A) _Audio"
     center -300 -110
     dimensions 90 30
     color medium
     hover bright
-  button o "_Open Plugins"
+  button o "(X) _Open Plugins"
     center -195 210
     dimensions 120 30
   visible if "show plugins changed"
@@ -716,22 +716,22 @@ interface "audio"
     center 285 -82
   sprite "ui/settings base panel"
     center -1 -20
-  button c "_Controls"
+  button c "(*B) _Controls"
     center -300 -230
     dimensions 90 30
     color medium
     hover bright
-  button s "_Settings"
+  button s "(Y) _Settings"
     center -300 -190
     dimensions 90 30
     color medium
     hover bright
-  button p "_Plugins"
+  button p "(v) _Plugins"
     center -300 -150
     dimensions 90 30
     color medium
     hover bright
-  button a "_Audio"
+  button a "(A) _Audio"
     center -300 -110
     dimensions 90 30
     color bright
@@ -1069,7 +1069,7 @@ interface "audio"
 
 
 interface "preferences"
-  button b "_Back to Menu..."
+  button b "(>) _Back to Menu"
     center 195 210
     dimensions 120 30
   value "master volume bar size" 220
@@ -1107,7 +1107,7 @@ interface "gamerules"
     center -350 102
   sprite "ui/settings base panel"
     center -1 -20
-  button b "_Back to Menu..."
+  button b "(>) _Back to Menu"
     center 195 210
     dimensions 120 30
   button g "_Gamerules"
@@ -1115,7 +1115,7 @@ interface "gamerules"
     dimensions 90 30
     color medium
     hover bright
-  button p "_Presets"
+  button p "(v) _Presets"
     center -304 -190
     dimensions 90 30
     color medium
@@ -1155,7 +1155,7 @@ interface "gamerules presets"
     center -350 102
   sprite "ui/settings base panel"
     center -1 -20
-  button b "_Back to Menu..."
+  button b "(>) _Back to Menu"
     center 195 210
     dimensions 120 30
   button g "_Gamerules"
@@ -1163,7 +1163,7 @@ interface "gamerules presets"
     dimensions 90 30
     color medium
     hover bright
-  button p "_Presets"
+  button p "(v) _Presets"
     center -304 -190
     dimensions 90 30
     color medium
@@ -1496,7 +1496,7 @@ interface "hud"
     from 145 380 top left
     align left
 
-  label "V: Player / Log  |  M: Map / Pause  |  R<,R>: Zoom in,out  |  R^: Asteroid  |  Rv: Turret Tr."
+  label "S: Player / Log  |  M: Map / Pause  |  R<,R>: Zoom in,out  |  R^: Asteroid  |  Rv: Turret Tr. | R^,Rv: Scroll (in shops)"
     from 0 -20 bottom center
     to 0 0 bottom center
 
@@ -1684,7 +1684,7 @@ interface "planet"
   visible if "has trade"
   sprite "ui/planet dialog button"
     center -340 90
-  button t "_Trading"
+  button t "(^) _Trading"
     center -340 90
     dimensions 140 40
     size 18
@@ -1694,7 +1694,7 @@ interface "planet"
   visible if "has job board"
   sprite "ui/planet dialog button"
     center -340 145
-  button j "_Job Board"
+  button j "(<) _Job Board"
     center -340 145
     dimensions 140 40
     size 18
@@ -1704,7 +1704,7 @@ interface "planet"
   visible
   sprite "ui/planet dialog button"
     center -340 200
-  button i "Player _Info"
+  button i "(S) Player _Info"
     center -340 200
     dimensions 140 40
     size 18
@@ -1714,7 +1714,7 @@ interface "planet"
   visible if "has bank"
   sprite "ui/planet dialog button"
     center -340 255
-  button b "_Bank"
+  button b "(>) _Bank"
     center -340 255
     dimensions 140 40
     size 18
@@ -1724,17 +1724,23 @@ interface "planet"
   visible if "has port"
   sprite "ui/planet dialog button"
     center -340 310
-  "dynamic button" p "port name"
+  button p "(v)"
     center -340 310
     dimensions 140 40
     size 18
     align left
     pad 10 0
+  string "port name"
+    center -340 310
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
   
   visible if "has shipyard"
   sprite "ui/planet dialog button"
     center 340 90
-  button s "_Shipyard"
+  button s "_Shipyard (Y)"
     center 340 90
     dimensions 140 40
     size 18
@@ -1744,7 +1750,7 @@ interface "planet"
   visible if "has outfitter"
   sprite "ui/planet dialog button"
     center 340 145
-  button o "_Outfitter"
+  button o "_Outfitter (X)"
     center 340 145
     dimensions 140 40
     size 18
@@ -1754,7 +1760,7 @@ interface "planet"
   visible if "can hire crew"
   sprite "ui/planet dialog button"
     center 340 200
-  button h "_Hire Crew"
+  button h "_Hire Crew (*<)"
     center 340 200
     dimensions 140 40
     size 18
@@ -1789,7 +1795,7 @@ interface "planet (small screen)"
   visible if "has trade"
   sprite "ui/planet dialog button"
     center -400 90
-  button t "_Trading"
+  button t "(^) _Trading"
     center -400 90
     dimensions 140 40
     size 18
@@ -1799,7 +1805,7 @@ interface "planet (small screen)"
   visible if "has job board"
   sprite "ui/planet dialog button"
     center -400 145
-  button j "_Job Board"
+  button j "(<) _Job Board"
     center -400 145
     dimensions 140 40
     size 18
@@ -1809,7 +1815,7 @@ interface "planet (small screen)"
   visible
   sprite "ui/planet dialog button"
     center -400 200
-  button i "Player _Info"
+  button i "(S) Player _Info"
     center -400 200
     dimensions 140 40
     size 18
@@ -1819,7 +1825,7 @@ interface "planet (small screen)"
   visible if "has bank"
   sprite "ui/planet dialog button"
     center -400 255
-  button b "_Bank"
+  button b "(>) _Bank"
     center -400 255
     dimensions 140 40
     size 18
@@ -1829,17 +1835,23 @@ interface "planet (small screen)"
   visible if "has port"
   sprite "ui/planet dialog button"
     center -400 310
-  "dynamic button" p "port name"
+  button p "(v)"
     center -400 310
     dimensions 140 40
     size 18
     align left
     pad 10 0
+  string "port name"
+    center -400 310
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
   
   visible if "has shipyard"
   sprite "ui/planet dialog button"
     center 280 90
-  button s "_Shipyard"
+  button s "_Shipyard (Y)"
     center 280 90
     dimensions 140 40
     size 18
@@ -1849,7 +1861,7 @@ interface "planet (small screen)"
   visible if "has outfitter"
   sprite "ui/planet dialog button"
     center 280 145
-  button o "_Outfitter"
+  button o "_Outfitter (X)"
     center 280 145
     dimensions 140 40
     size 18
@@ -1859,7 +1871,7 @@ interface "planet (small screen)"
   visible if "can hire crew"
   sprite "ui/planet dialog button"
     center 280 200
-  button h "_Hire Crew"
+  button h "_Hire Crew (*<)"
     center 280 200
     dimensions 140 40
     size 18
@@ -2014,7 +2026,7 @@ interface "boarding"
     align right
   
   active if "can take"
-  button t "_Take"
+  button t "(^) _Take"
     center -235 115
     dimensions 70 30
   
@@ -2024,12 +2036,12 @@ interface "boarding"
     dimensions 70 30
   
   active if "can capture"
-  button c "Attempt _Capture"
+  button c "(*B) Try _Capture"
     center -40 115
     dimensions 140 30
   
   active if "can attack"
-  button a "_Attack"
+  button a "(A) _Attack"
     center 120 185
     dimensions 80 30
   
@@ -2092,17 +2104,21 @@ interface "hiring"
     center 230 150
     align right
   
+  label "(LB>R<) Hire Max, (LB>R>) Fire Max"
+    center -250 355
+    align left center
+  
   active if "can hire"
   sprite "ui/dialog cancel"
     center 200 355
-  button h "_Hire"
+  button h "(R<) _Hire"
     center 200 355
     dimensions 80 40
   
   active if "can fire"
   sprite "ui/dialog cancel"
     center 120 355
-  button f "_Fire"
+  button f "(R>) _Fire"
     center 120 355
     dimensions 80 40
   
@@ -2192,14 +2208,14 @@ interface "hiring (small screen)"
   active if "can hire"
   sprite "ui/dialog cancel"
     center 140 355
-  button h "_Hire"
+  button h "(R<) _Hire"
     center 140 355
     dimensions 80 40
   
   active if "can fire"
   sprite "ui/dialog cancel"
     center 60 355
-  button f "_Fire"
+  button f "(R>) _Fire"
     center 60 355
     dimensions 80 40
   
@@ -2244,21 +2260,21 @@ interface "trade"
   active if "can buy"
   sprite "ui/dialog cancel"
     center 120 355
-  button u "B_uy All"
+  button u "(*X) B_uy All"
     center 120 355
     dimensions 70 30
 
   active if "can sell"
   sprite "ui/dialog cancel"
     center 200 355
-  button e "S_ell All"
+  button e "(*Y) S_ell All"
     center 200 355
     dimensions 70 30
 
   active if "can sell minables"
   sprite "ui/wide button"
     center -90 355
-  button m "Sell _Minables"
+  button m "(M) Sell _Minables"
     center -90 355
     dimensions 90 30
 
@@ -2282,21 +2298,21 @@ interface "trade (small screen)"
   active if "can buy"
   sprite "ui/dialog cancel"
     center 60 355
-  button u "B_uy All"
+  button u "(*X) B_uy All"
     center 60 355
     dimensions 70 30
 
   active if "can sell"
   sprite "ui/dialog cancel"
     center 140 355
-  button e "S_ell All"
+  button e "(*Y) S_ell All"
     center 140 355
     dimensions 70 30
 
   active if "can sell minables"
   sprite "ui/wide button"
     center -150 355
-  button m "Sell _Minables"
+  button m "(M) Sell _Minables"
     center -150 355
     dimensions 90 30
 
@@ -2320,7 +2336,7 @@ interface "bank"
   active if "can pay"
   sprite "ui/dialog cancel"
     center 200 355
-  button a "Pay _All"
+  button a "(A) Pay _All"
     center 200 355
     dimensions 80 40
 
@@ -2337,7 +2353,7 @@ interface "bank (small screen)"
   active if "can pay"
   sprite "ui/dialog cancel"
     center 140 355
-  button a "Pay _All"
+  button a "(A) Pay _All"
     center 140 355
     dimensions 80 40
 
@@ -2370,12 +2386,12 @@ interface "mission" bottom
     center 130 -65
   
   active if "can accept"
-  button a "_Accept Mission"
+  button a "(A) _Accept"
     center -45 -25
     dimensions 130 30
   
   active if "can abort"
-  button A "Abort"
+  button A "(*A) Abort"
     center 70 -25
     dimensions 80 30
 
@@ -2385,31 +2401,31 @@ interface "map buttons" bottom right
   active if "!is shipyards"
   sprite "ui/wide button"
     from -544 -50 to -434 0
-  button s "_Shipyards"
+  button s "(Y) _Shipyards"
     from -534 -40 to -444 -10
   
   active if "!is outfitters"
   sprite "ui/wide button"
     from -444 -50 to -334 0
-  button o "_Outfitters"
+  button o "(X) _Outfitters"
     from -434 -40 to -344 -10
   
   active if "!is missions"
   sprite "ui/dialog cancel"
     from -344 -50 to -254 0
-  button i "M_issions"
+  button i "(S) M_issions"
     from -334 -40 to -264 -10
   
   active if "!is ports"
   sprite "ui/dialog cancel"
     from -264 -50 to -174 0
-  button p "_Ports"
+  button p "(v) _Ports"
     from -254 -40 to -184 -10
 
   active if "!is stars"
   sprite "ui/dialog cancel"
     from -184 -50 to -94 0
-  button t "S_tars"
+  button t "(^) S_tars"
     from -174 -40 to -104 -10
   
   active
@@ -2435,36 +2451,53 @@ interface "map buttons" bottom right
     from -50 -90 to -80 -120
     size 18
 
+  active
+  visible if "!is missions"
+  label "RT: Cycle Systems"
+    from -155 -180
+    align left
+  label "LB>RB: Add destination"
+    from -155 -165
+    align left
+  label "LB>Y: Undo destination"
+    from -155 -150
+    align left
+  
+  visible
+  label "R: Toggle 'Mouse mode'"
+    from -155 -135
+    align left
+
 
 interface "map buttons (small screen)" bottom right
   active if "!is shipyards"
   sprite "ui/wide button"
     from -270 -40 to -160 -90
-  button s "_Shipyards"
+  button s "(Y) _Shipyards"
     from -260 -50 to -170 -80
 
   active if "!is outfitters"
   sprite "ui/wide button"
     from -270 -50 to -160 0
-  button o "_Outfitters"
+  button o "(X) _Outfitters"
     from -260 -40 to -170 -10
 
   active if "!is missions"
   sprite "ui/dialog cancel"
     from -170 -30 to -80 -180
-  button i "M_issions"
+  button i "(S) M_issions"
     from -160 -60 to -90 -150
 
   active if "!is ports"
   sprite "ui/dialog cancel"
     from -170 -50 to -80 0
-  button p "_Ports"
+  button p "(v) _Ports"
     from -160 -40 to -90 -10
 
   active if "!is stars"
   sprite "ui/dialog cancel"
     from -170 -40 to -80 -90
-  button t "S_tars"
+  button t "(^) S_tars"
     from -160 -80 to -90 -50
 
   active
@@ -2489,6 +2522,23 @@ interface "map buttons (small screen)" bottom right
   button - "_-"
     from -50 -90 to -80 -120
     size 18
+
+  active
+  visible if "!is missions"
+  label "RT: Cycle Systems"
+    from -155 -180
+    align left
+  label "LB>RB: Add destination"
+    from -155 -165
+    align left
+  label "LB>Y: Undo destination"
+    from -155 -150
+    align left
+  
+  visible
+  label "R: Toggle 'Mouse mode'"
+    from -155 -135
+    align left
 
 
 
@@ -2622,11 +2672,18 @@ interface "info panel"
     from 250 -290 to 500 280
   
   visible if "ship tab"
+    visible if "ship tab"
+#  sprite "ui/dialog cancel"
   sprite "ui/very wide button"
-    center 430 255
-  button R "(LB>Y) Rename"
-    center 430 255
-    dimensions 250 30
+    center -265 305
+  button R "(LB>X) Rename"
+    center -265 305
+    dimensions 70 30
+#  sprite "ui/very wide button"
+#    center 430 255
+#  button R "(LB>X) Rename"
+#    center 430 255
+#    dimensions 250 30
   sprite "ui/ship tab"
     center 0 -310
   label "Ship Info"
@@ -2649,16 +2706,19 @@ interface "info panel"
   button s
     center -300 -305
     dimensions 120 30
-  
+
   visible
+  label "LT>RT: Player <> Ship"
+    center -150 -305
+
   button d "_Done (B)"
     center 455 305
     dimensions 90 30
-  button m "_Missions..."
+  button m "(M) _Missions..."
     center 355 305
     dimensions 90 30
   active if "enable logbook"
-  button l "_Logbook..."
+  button l "(*S) _Logbook..."
     center 255 305
     dimensions 90 30
   active
@@ -2675,7 +2735,7 @@ interface "info panel"
   active if "can park"
   sprite "ui/dialog cancel"
     center -55 305
-  button k "Par_k"
+  button k "(*A) Par_k"
     center -55 305
     dimensions 70 30
   active
@@ -2683,7 +2743,7 @@ interface "info panel"
   visible if "show unpark"
   sprite "ui/dialog cancel"
     center -55 305
-  button k "Unpar_k"
+  button k "(*A) Unpar_k"
     center -55 305
     dimensions 70 30
   
@@ -2698,7 +2758,7 @@ interface "info panel"
   active if "enable dump"
   sprite "ui/wide button"
     center -65 305
-  button c "Dump _Cargo"
+  button c "(*B) Dump _Cargo"
     center -65 305
     dimensions 90 30
   active
@@ -2706,31 +2766,31 @@ interface "info panel"
   visible if "show park all"
   sprite "ui/wide button"
     center 145 305
-  button a "Park _All"
+  button a "(A) Park _All"
     center 145 305
     dimensions 90 30
   visible if "show unpark all"
   sprite "ui/wide button"
     center 145 305
-  button a "Unpark _All"
+  button a "(A) Unpark _All"
     center 145 305
     dimensions 90 30
   visible if "show park system"
   sprite "ui/wide button"
     center 40 305
-  button c "Park Lo_cal"
+  button c "(*B) Park Lo_cal"
     center 40 305
     dimensions 90 30
   visible if "show unpark system"
   sprite "ui/wide button"
     center 40 305
-  button c "Unpark Lo_cal"
+  button c "(*B) Unpark Lo_cal"
     center 40 305
     dimensions 90 30
   visible if "show save order"
   sprite "ui/wide button"
     center -195 305
-  button v "Sa_ve Order"
+  button v "(*v) Sa_ve Order"
     center -195 305
     dimensions 90 30
 
@@ -2760,7 +2820,7 @@ interface "message log"
   button i ""
     center 706 -20 bottom left
     dimensions 142 40
-  "wrapped label" "  (#i#) Hide less _important messages"
+  "wrapped label" "  (S) Hide less _important messages"
     center 714 -16 bottom left
     width 150
     color active
@@ -2768,7 +2828,7 @@ interface "message log"
   sprite "ui/dialog cancel"
     center 654 -80 bottom left
   active if "!empty"
-  button c "(#c#) Clear"
+  button c "(*B) Clear"
     center 654 -80 bottom left
     dimensions 70 30
 
@@ -2793,27 +2853,27 @@ interface "hail panel"
 
   visible if "!show pay bribe"
   active if "can bribe"
-  button b "Offer _Bribe"
+  button b "(>) Offer _Bribe"
     center 130 115
     dimensions 140 30
   visible if "show pay bribe"
   active if "can pay bribe"
-  button b "Pay _Bribe"
+  button b "(>) Pay _Bribe"
     center 130 115
     dimensions 140 30
     
   visible if "show dominate"
   active if "can dominate"
-  button t "Demand _Tribute"
+  button t "(^) Demand _Tribute"
     center -20 115
     dimensions 140 30
   visible if "show relinquish"
-  button t "Relinquish _Tribute"
+  button t "(^) Relinquish _Tribute"
     center -20 115
     dimensions 140 30
   visible if "show assist"
   active if "can assist"
-  button h "Ask For _Help"
+  button h "(*<) Ask For _Help"
     center -20 115
     dimensions 140 30
 
