@@ -32,6 +32,6 @@ Pause 113
 "Fleet: Gather around me" 112
 "Fleet: Hold position" 118
 "Fleet: Harvest flotsam" 122
-"Fleet: Scan my target" 35
+"Fleet: Scan my target" 13
 "Fleet: Toggle ammo usage" 104
 "Auto steer" 101
