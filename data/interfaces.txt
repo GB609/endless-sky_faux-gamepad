@@ -1460,8 +1460,8 @@ interface "hud"
     from 0 460 top left
     to 120 0 bottom left
   box "messages"
-    from 120 0 bottom left
-    to -110 -200 bottom right
+    from 120 -20 bottom left
+    to -110 -220 bottom right
   value "messages reversed" 0
   value "message animation duration" 30
   box "ammo"
@@ -1469,6 +1469,51 @@ interface "hud"
     to 0 0 bottom right
   value "ammo icon height" 30
   value "ammo icon width" 80
+
+  visible
+  label "LB: Hostile / *[SHIFT]"
+    from 145 260 top left
+    align left
+  label "RB: Next Ship / Jump"
+    from 145 275 top left
+    align left
+  label "-= Fleet commands =-"
+    from 145 305 top left
+    align left
+  label "*LB: (Select / Set) group 1, 2, 3, 4"
+    from 145 320 top left
+    align left
+  label "^: Attack / Hold Fire"
+    from 145 335 top left
+    align left
+  label "<: Flotsam / Ammo Usage"
+    from 145 350 top left
+    align left
+  label ">: Board / Scan"
+    from 145 365 top left
+    align left
+  label "v: Gather / Hold Pos"
+    from 145 380 top left
+    align left
+
+  label "V: Player / Log  |  M: Map / Pause  |  R<,R>: Zoom in,out  |  R^: Asteroid  |  Rv: Turret Tr."
+    from 0 -20 bottom center
+    to 0 0 bottom center
+
+  anchor bottom right  
+  label "Y: Scan / A.Steer"
+    from -120 -135
+    align left
+  label "X: Ammo / Deploy"
+    from -120 -120
+    align left
+  label "B: Land / Cloak"
+    from -120 -105
+    align left
+  label "A: Talk / Turbo"
+    from -120 -90
+    align left
+
   anchor top
   point "mini-map"
     center 0 100
