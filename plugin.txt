@@ -9,5 +9,5 @@ tags
   Gamepad
   UI
 
-dependencies:
+dependencies
   "game version": v0.10.12
