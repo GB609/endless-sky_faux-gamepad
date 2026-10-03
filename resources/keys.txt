@@ -21,7 +21,7 @@ Reverse 1073741905
 "Toggle cloaking device" 99
 "View star map" 109
 "View player info" 105
-"View message log" 1073741886
+"View message log" 108
 "Toggle fullscreen" 1073741892
 "Toggle fast-forward" 1073741881
 "Show help" 1073741882
@@ -34,4 +34,4 @@ Pause 113
 "Fleet: Harvest flotsam" 122
 "Fleet: Scan my target" 35
 "Fleet: Toggle ammo usage" 104
-"Auto steer" 0
+"Auto steer" 101
