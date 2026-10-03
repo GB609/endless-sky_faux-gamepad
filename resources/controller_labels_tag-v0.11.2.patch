@@ -1,0 +1,81 @@
+diff --git a/source/DialogPanel.cpp b/source/DialogPanel.cpp
+index 68a5fec..cbb2ffd 100644
+--- a/source/DialogPanel.cpp
++++ b/source/DialogPanel.cpp
+@@ -298,13 +298,13 @@
+ 	numButtons = canCancel ? (!buttonThree.buttonLabel.empty() ? 3 : 2) : 1;
+ 
+ 	if(buttonOne.buttonLabel.empty())
+-		okText = isMission ? "Accept" : "OK";
++		okText = (isMission ? "Accept" : "OK") + " (*^)";
+ 	else
+ 	{
+ 		okText = buttonOne.buttonLabel;
+ 		stringFun = buttonOne.buttonAction;
+ 	}
+-	cancelText = isMission ? "Decline" : "Cancel";
++	cancelText = "(G) " + (isMission ? "Decline" : "Cancel");
+ 
+ 	text = make_shared<TextArea>();
+ 	text->SetAlignment(Preferences::GetTextAlignment());
+diff --git a/source/OutfitterPanel.cpp b/source/OutfitterPanel.cpp
+index 396b56f..03f9ee0 100644
+--- a/source/OutfitterPanel.cpp
++++ b/source/OutfitterPanel.cpp
+@@ -1317,23 +1317,23 @@
+ 	buttonZones.clear();
+ 
+ 	// Row 1.
+-	DrawButton("_Buy", Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 0), buttonSize),
++	DrawButton("(>) Buy", Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		ButtonActive('b'), hoverButton == 'b', 'b');
+-	DrawButton("_Install", Rectangle(Point(buttonCenterX + buttonOffsetX * 0, rowBaseY + rowOffsetY * 0), buttonSize),
++	DrawButton("(V) Instl", Rectangle(Point(buttonCenterX + buttonOffsetX * 0, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		ButtonActive('i'), hoverButton == 'i', 'i');
+-	DrawButton("_Cargo", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
++	DrawButton("(B) Cargo", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		ButtonActive('c'), hoverButton == 'c', 'c');
+ 	// Row 2.
+-	DrawButton("_Sell", Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 1), buttonSize),
++	DrawButton("(Y) Sell", Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 1), buttonSize),
+ 		ButtonActive('s'), hoverButton == 's', 's');
+ 	DrawButton(!CanMoveOutfit(OutfitLocation::Ship, OutfitLocation::Storage) &&
+-		CanMoveOutfit(OutfitLocation::Cargo, OutfitLocation::Storage) ? "_Unload" : "_Uninstall",
++		CanMoveOutfit(OutfitLocation::Cargo, OutfitLocation::Storage) ? "(*X) Unload" : "(*X) Uinstl",
+ 		Rectangle(Point(buttonCenterX + buttonOffsetX * 0, rowBaseY + rowOffsetY * 1), buttonSize),
+ 		ButtonActive('u'), hoverButton == 'u', 'u');
+-	DrawButton("Sto_re", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 1), buttonSize),
++	DrawButton("(LB) Store", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 1), buttonSize),
+ 		ButtonActive('r'), hoverButton == 'r', 'r');
+ 	// Row 3.
+-	DrawButton("_Leave", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 2), buttonSize),
++	DrawButton("Leave (B)", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 2), buttonSize),
+ 		true, hoverButton == 'l', 'l');
+ 
+ 	font.Draw("Quantity:", Screen::BottomRight() - Point(SIDEBAR_WIDTH - 10, 33), dim);
+diff --git a/source/ShipyardPanel.cpp b/source/ShipyardPanel.cpp
+index c405d86..e593bcd 100644
+--- a/source/ShipyardPanel.cpp
++++ b/source/ShipyardPanel.cpp
+@@ -245,17 +245,17 @@
+ 	buttonZones.clear();
+ 
+ 	// Row 1
+-	DrawButton("_Buy",
++	DrawButton("(>) Buy",
+ 		Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		static_cast<bool>(CanDoBuyButton()), hoverButton == 'b', 'b');
+-	DrawButton("_Sell",
++	DrawButton("(Y) Sell",
+ 		Rectangle(Point(buttonCenterX + buttonOffsetX * 0, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		static_cast<bool>(playerShips.size()), hoverButton == 's', 's');
+-	DrawButton("Sell H_ull",
++	DrawButton("(LB) S. Hull",
+ 		Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
+ 		static_cast<bool>(playerShips.size()), hoverButton == 'r', 'r');
+ 	// Row 2
+-	DrawButton("_Leave",
++	DrawButton("Leave (B)",
+ 		Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 1), buttonSize),
+ 		true, hoverButton == 'l', 'l');
+ 

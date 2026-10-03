@@ -11,6 +11,8 @@ onto the controller as possible. But these must also be documented, which is why
 The plugin itself does not generate keystrokes from controllers or start external tools as this is not possible
 with the data scripting of ES. It is more of a 'documentation' of the controller mappings.
 
+**This is in a 'proof-of-concept' state** - the UI additions are a fast work done just to get something usable.
+
 ## TL;DR
 
 1. Install AntiMicroX (use original on Github, sadly there exist scammer websites for AMX)
@@ -23,7 +25,9 @@ with the data scripting of ES. It is more of a 'documentation' of the controller
 ## Strategy:
 
 1. A UI plugin enriches button labels and occasionally adds keybind hint labels.  
-   Without this, the myriad of different contexts and functions are hard to learn and remember.
+   Without this, the myriad of different contexts and functions are hard to learn and remember.  
+   The plugin alone can't change ALL labels, some are hardcoded. For this, the `resource` directory contains 
+   a rudimentary patch for version v.0.11.12.
 2. A pre-configured profile for AntiMicroX is part of the plugin sources.  
    The user has to manually configure this
    profile for AntiMicroX outside of the game.
@@ -106,4 +110,5 @@ finally added into the controller profile.
 - Typing names. In theory, almost every key of the alphabet is somewhere in the controller, but these are interna.  
   What's needed here would be a proper on-screen keyboard.
 - Shops permit changing control focus between the 'left' panel and the 'ship' panel, but there is no visual indication.
+- Several of the patched labels in the POC are larger than their buttons/borders allow.
   
