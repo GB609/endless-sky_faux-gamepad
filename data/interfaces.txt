@@ -2104,7 +2104,7 @@ interface "hiring"
     center 230 150
     align right
   
-  label "(LB>R<) Hire Max, (LB>R>) Fire Max"
+  label "(LT>R<) Hire 20, (LT>R>) Fire 20"
     center -250 355
     align left center
   
