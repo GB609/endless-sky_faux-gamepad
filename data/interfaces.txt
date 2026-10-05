@@ -2459,7 +2459,7 @@ interface "map buttons" bottom right
   label "LB>RB: Add destination"
     from -155 -165
     align left
-  label "LB>Y: Undo destination"
+  label "*>: Undo destination"
     from -155 -150
     align left
   
@@ -2531,7 +2531,7 @@ interface "map buttons (small screen)" bottom right
   label "LB>RB: Add destination"
     from -155 -165
     align left
-  label "LB>Y: Undo destination"
+  label "*>: Undo destination"
     from -155 -150
     align left
   
