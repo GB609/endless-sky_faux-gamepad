@@ -28,10 +28,10 @@ Reverse 1073741905
 Pause 113
 "Toggle performance info" 1073741884
 "Fleet: Fight my target" 116
-"Fleet: Toggle hold fire" 94
+"Fleet: Toggle hold fire" 13
 "Fleet: Gather around me" 112
 "Fleet: Hold position" 118
-"Fleet: Harvest flotsam" 122
-"Fleet: Scan my target" 13
+"Fleet: Harvest flotsam" 106
+"Fleet: Scan my target" 8
 "Fleet: Toggle ammo usage" 104
 "Auto steer" 101
