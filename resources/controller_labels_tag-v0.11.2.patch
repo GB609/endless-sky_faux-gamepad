@@ -18,8 +18,21 @@ index 68a5fec..6e5825a 100644
  
  	text = make_shared<TextArea>();
  	text->SetAlignment(Preferences::GetTextAlignment());
+diff --git a/source/OptionalInputDialogPanel.cpp b/source/OptionalInputDialogPanel.cpp
+index 3d84cd4..c421d41 100644
+--- a/source/OptionalInputDialogPanel.cpp
++++ b/source/OptionalInputDialogPanel.cpp
+@@ -35,7 +35,7 @@
+ 			optionalDoubleFun(value);
+ 		};
+ 	}
+-	buttonThree = FunctionButton(this, "Unset", 'u', &OptionalInputDialogPanel::Unset);
++	buttonThree = FunctionButton(this, "(*X) Unset", 'u', &OptionalInputDialogPanel::Unset);
+ 	numButtons = 3;
+ 	DialogPanel::Resize();
+ }
 diff --git a/source/OutfitterPanel.cpp b/source/OutfitterPanel.cpp
-index 396b56f..03f9ee0 100644
+index 396b56f..42cfbf2 100644
 --- a/source/OutfitterPanel.cpp
 +++ b/source/OutfitterPanel.cpp
 @@ -1317,23 +1317,23 @@
@@ -33,7 +46,7 @@ index 396b56f..03f9ee0 100644
 +	DrawButton("(V) Instl", Rectangle(Point(buttonCenterX + buttonOffsetX * 0, rowBaseY + rowOffsetY * 0), buttonSize),
  		ButtonActive('i'), hoverButton == 'i', 'i');
 -	DrawButton("_Cargo", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
-+	DrawButton("(B) Cargo", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
++	DrawButton("(*B) Cargo", Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 0), buttonSize),
  		ButtonActive('c'), hoverButton == 'c', 'c');
  	// Row 2.
 -	DrawButton("_Sell", Rectangle(Point(buttonCenterX + buttonOffsetX * -1, rowBaseY + rowOffsetY * 1), buttonSize),
@@ -53,8 +66,34 @@ index 396b56f..03f9ee0 100644
  		true, hoverButton == 'l', 'l');
  
  	font.Draw("Quantity:", Screen::BottomRight() - Point(SIDEBAR_WIDTH - 10, 33), dim);
+diff --git a/source/ShipInfoPanel.cpp b/source/ShipInfoPanel.cpp
+index d4f5cec..77fbef2 100644
+--- a/source/ShipInfoPanel.cpp
++++ b/source/ShipInfoPanel.cpp
+@@ -179,7 +179,7 @@
+ 	}
+ 	else if(key == 'R' || (key == 'r' && shift))
+ 		GetUI().Push(ShipNameDialogPanel::Create(
+-			DialogPanel::FunctionButton(this, "Rename", 'r', &ShipInfoPanel::Rename),
++			DialogPanel::FunctionButton(this, "(*^) Rename", 'r', &ShipInfoPanel::Rename),
+ 			"Change this ship's name?", (*shipIt)->GivenName()));
+ 	else if(panelState.CanEdit() && (key == 'P' || (key == 'p' && shift) || key == 'k'))
+ 	{
+diff --git a/source/ShipNameDialogPanel.cpp b/source/ShipNameDialogPanel.cpp
+index 63f6142..82b8d76 100644
+--- a/source/ShipNameDialogPanel.cpp
++++ b/source/ShipNameDialogPanel.cpp
+@@ -36,7 +36,7 @@
+ ShipNameDialogPanel::ShipNameDialogPanel(DialogInit &init)
+ 	: DialogPanel(init)
+ {
+-	buttonThree = FunctionButton(this, "Random", 'r', &ShipNameDialogPanel::RandomName);
++	buttonThree = FunctionButton(this, "(LB) Random", 'r', &ShipNameDialogPanel::RandomName);
+ 	numButtons = 3;
+ }
+ 
 diff --git a/source/ShipyardPanel.cpp b/source/ShipyardPanel.cpp
-index c405d86..e593bcd 100644
+index c405d86..bca492a 100644
 --- a/source/ShipyardPanel.cpp
 +++ b/source/ShipyardPanel.cpp
 @@ -245,17 +245,17 @@
@@ -78,4 +117,13 @@ index c405d86..e593bcd 100644
 +	DrawButton("Leave (B)",
  		Rectangle(Point(buttonCenterX + buttonOffsetX * 1, rowBaseY + rowOffsetY * 1), buttonSize),
  		true, hoverButton == 'l', 'l');
+ 
+@@ -395,7 +395,7 @@
+ 		message += selectedShip->PluralModelName() + "! (Or leave it blank to use randomly chosen names.)";
+ 
+ 	GetUI().Push(ShipNameDialogPanel::Create(
+-			DialogPanel::FunctionButton(this, "Buy", 'b', &ShipyardPanel::BuyShip),
++			DialogPanel::FunctionButton(this, "(*^) Buy", 'b', &ShipyardPanel::BuyShip),
+ 			message));
+ }
  
